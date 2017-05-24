@@ -151,6 +151,189 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-APP-web-and-JS/test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>app内嵌页面跳转</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="mobileOptimized" content="width">
+<meta name="handheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<script>
+    !(function(win, M) {
+        function L() {
+            var a = html.getBoundingClientRect().width;
+            a / F > 640 && (a = 640 * F);
+            // 淘宝除以10，我们这里除以7.5.默认750px时rem是100px;
+            var d = a / 7.5;
+            // alert(d);
+            html.style.fontSize = d + "px", D.rem = win.rem = d;
+        }
+        var timer, doc = win.document,
+            html = doc.documentElement,
+            viewport = doc.querySelector('meta[name="viewport"]'),
+            mflex = doc.querySelector('meta[name="flexible"]'),
+            F = 0,
+            E = 0,
+            D = M.flexible || (M.flexible = {});
+        if (viewport) {
+            // console.warn("将根据已有的meta标签来设置缩放比例");
+            var scale = viewport.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
+            scale && (E = parseFloat(scale[1]), F = parseInt(1 / E));
+        } else {
+            if (mflex) {
+                var mContent = mflex.getAttribute("content");
+                if (mContent) {
+                    var iDpr = mContent.match(/initial\-dpr=([\d\.]+)/),
+                        mDpr = mContent.match(/maximum\-dpr=([\d\.]+)/);
+                    iDpr && (F = parseFloat(iDpr[1]), E = parseFloat((1 / F).toFixed(2))), mDpr && (F = parseFloat(mDpr[1]), E = parseFloat((1 / F).toFixed(2)));
+                }
+            }
+        }
+        if (!F && !E) {
+            var y = win.navigator.userAgent,
+                x = (!!y.match(/android/gi), !!y.match(/iphone/gi)),
+                w = x && !!y.match(/OS 9_3/),
+                v = win.devicePixelRatio;
+            F = x && !w ? v >= 3 && (!F || F >= 3) ? 3 : v >= 2 && (!F || F >= 2) ? 2 : 1 : 1, E = 1 / F;
+        }
+        if (html.setAttribute("data-dpr", F), !viewport) {
+            if (viewport = doc.createElement("meta"), viewport.setAttribute("name", "viewport"), viewport.setAttribute("content", "initial-scale=" + E + ", maximum-scale=" + E + ", minimum-scale=" + E + ", user-scalable=no"), html.firstElementChild) {
+                html.firstElementChild.appendChild(viewport);
+            } else {
+                var u = doc.createElement("div");
+                u.appendChild(viewport), doc.write(u.innerHTML);
+            }
+        }
+        win.addEventListener("resize", function() {
+            clearTimeout(timer), timer = setTimeout(L, 300);
+        }, !1), 
+        win.addEventListener("pageshow", function(b) {
+            b.persisted && (clearTimeout(timer), timer = setTimeout(L, 300));
+        }, !1), 
+        "complete" === doc.readyState ? doc.body.style.fontSize = 12 * F + "px" : doc.addEventListener("DOMContentLoaded", function() {
+            doc.body.style.fontSize = 12 * F + "px";
+        }, !1), 
+        L(), 
+        D.dpr = win.dpr = F, D.refreshRem = L, D.rem2px = function(d) {
+            var c = parseFloat(d) * this.rem;
+            return "string" == typeof d && d.match(/rem$/) && (c += "px"), c;
+        }, 
+        D.px2rem = function(d) {
+            var c = parseFloat(d) / this.rem;
+            return "string" == typeof d && d.match(/px$/) && (c += "rem"), c;
+        };
+    })(window, window.lib || (window.lib = {}));
+
+    var _hmt = _hmt || [];
+    (function() {
+        var host = document.location.hostname;
+        if (/lcfarm.com$/ig.test(host)) {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?a041a0f4ff93aef6aa83f34134331a1d";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        }
+    })();
+</script><!--ignore-->
+	<style type="text/css">
+		html,body{
+			width: 7.5rem;
+			height: 100%;
+		}
+		a{
+			margin-right: 0.15rem;
+			line-height: 0.45rem;
+		}
+		button{
+			width: 5rem;
+			height: 0.6rem;
+			text-align: center;
+			height: 0.46rem;
+			line-height: 0.46rem;
+			border: 1px solid #000;
+			border-radius: 5px;
+			margin: 0.15rem auto;
+		}
+	</style>
+</head>
+<body>
+	<a href="http://h.huajiao.com/l/profile?uid=65963583" target="_blank" rel="external">a标签外链花椒直播</a>
+	<a href="https://www.baidu.com/" target="_blank" rel="external">a标签外链百度</a>
+	<a href="javascript:void();" onclick="window.location='https://www.tmall.com/';" target="_blank" rel="external">a标签外链天猫</a>
+	<button class="out1" onclick="window.location.href = 'http://h.huajiao.com/l/profile?uid=65963583';">location.href外链花椒直播</button>
+	<button class="out2" onclick="window.location.href = 'https://www.baidu.com/';">location.href外链百度</button>
+	<button class="out3" onclick="window.location.href = 'https://www.tmall.com/'">location.href外链天猫</button>
+	<button class="out01" onclick="window.open('http://h.huajiao.com/l/profile?uid=65963583');">window.open外链花椒直播</button>
+	<button class="out02" onclick="window.open('https://www.baidu.com/');">window.open外链百度</button>
+	<button class="out03" onclick="window.open('https://www.tmall.com/');">window.open外链天猫</button>
+</body>
+<!-- <script type="text/javascript" src="./js/common/dep/mod.js" data-loader></script> -->
+<!-- <script type="text/javascript" src="./js/zepto.min.js" data-loader></script> -->
+<!-- <script type="text/javascript" src="./js/common/js/common.js" data-loader></script> -->
+<script type="text/javascript">
+		// window.location='/html_my/my_account.html';
+	// var callApp = require('./js/callApp.js'),
+	// 	bom = require('/common/js/base/bom.js');
+	document.getElementsByClassName('out1').onclick = function(){
+		window.location.href = 'http://h.huajiao.com/l/profile?uid=65963583';
+	};
+	// $('.out2').on('click',function(){
+	// 	window.location.href = 'https://www.baidu.com/';
+	// });
+	// $('.out3').on('click',function(){
+	// 	window.location.href = 'https://www.tmall.com/';
+	// });
+	// $('.out01').on('click',function(){
+	// 	window.open('http://h.huajiao.com/l/profile?uid=65963583');
+	// });
+	// $('.out02').on('click',function(){
+	// 	window.open('https://www.baidu.com/');
+	// });
+	// $('.out03').on('click',function(){
+	// 	window.open('https://www.tmall.com/');
+	// });
+
+</script>
+</html>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/23/APP-web-and-JS/test/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-APP-web-and-JS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
