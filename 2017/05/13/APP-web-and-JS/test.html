@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>app内嵌页面跳转</title>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name="format-detection" content="telephone=no,address=no,email=no">
-<meta name="mobileOptimized" content="width">
-<meta name="handheldFriendly" content="true">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-<script>
+    <meta charset="utf-8">
+    <title>app内嵌页面跳转</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <meta name="mobileOptimized" content="width">
+    <meta name="handheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <script>
     !(function(win, M) {
         function L() {
             var a = html.getBoundingClientRect().width;
@@ -57,23 +58,23 @@
             }
         }
         win.addEventListener("resize", function() {
-            clearTimeout(timer), timer = setTimeout(L, 300);
-        }, !1), 
-        win.addEventListener("pageshow", function(b) {
-            b.persisted && (clearTimeout(timer), timer = setTimeout(L, 300));
-        }, !1), 
-        "complete" === doc.readyState ? doc.body.style.fontSize = 12 * F + "px" : doc.addEventListener("DOMContentLoaded", function() {
-            doc.body.style.fontSize = 12 * F + "px";
-        }, !1), 
-        L(), 
-        D.dpr = win.dpr = F, D.refreshRem = L, D.rem2px = function(d) {
-            var c = parseFloat(d) * this.rem;
-            return "string" == typeof d && d.match(/rem$/) && (c += "px"), c;
-        }, 
-        D.px2rem = function(d) {
-            var c = parseFloat(d) / this.rem;
-            return "string" == typeof d && d.match(/px$/) && (c += "rem"), c;
-        };
+                clearTimeout(timer), timer = setTimeout(L, 300);
+            }, !1),
+            win.addEventListener("pageshow", function(b) {
+                b.persisted && (clearTimeout(timer), timer = setTimeout(L, 300));
+            }, !1),
+            "complete" === doc.readyState ? doc.body.style.fontSize = 12 * F + "px" : doc.addEventListener("DOMContentLoaded", function() {
+                doc.body.style.fontSize = 12 * F + "px";
+            }, !1),
+            L(),
+            D.dpr = win.dpr = F, D.refreshRem = L, D.rem2px = function(d) {
+                var c = parseFloat(d) * this.rem;
+                return "string" == typeof d && d.match(/rem$/) && (c += "px"), c;
+            },
+            D.px2rem = function(d) {
+                var c = parseFloat(d) / this.rem;
+                return "string" == typeof d && d.match(/px$/) && (c += "rem"), c;
+            };
     })(window, window.lib || (window.lib = {}));
 
     var _hmt = _hmt || [];
@@ -86,68 +87,81 @@
             s.parentNode.insertBefore(hm, s);
         }
     })();
-</script><!--ignore-->
-	<style type="text/css">
-		html,body{
-			width: 7.5rem;
-			height: 100%;
-		}
-		a{
-			margin-right: 0.15rem;
-			line-height: 0.45rem;
-		}
-		button{
-			width: 5rem;
-			height: 0.6rem;
-			text-align: center;
-			height: 0.46rem;
-			line-height: 0.46rem;
-			border: 1px solid #000;
-			border-radius: 5px;
-			margin: 0.15rem auto;
-		}
-	</style>
+    </script>
+    <!--ignore-->
+    <style type="text/css">
+    html,
+    body {
+        width: 7.5rem;
+        height: 100%;
+    }
+    
+    a {
+        margin-right: 0.15rem;
+        line-height: 0.45rem;
+    }
+    
+    button {
+        width: 5rem;
+        height: 0.6rem;
+        text-align: center;
+        height: 0.46rem;
+        line-height: 0.46rem;
+        border: 1px solid #000;
+        border-radius: 5px;
+        margin: 0.15rem auto;
+    }
+    </style>
 </head>
+
 <body>
     <a href="https://www.95516.com/portal/open/init.do?entry=open">a标签95516</a>
     <a href="https://mrliuys.github.io/2017/05/13/APP-web-and-JS/js.html">a标签_陈赟</a>
     <a href="https://mrliuys.github.io/2017/05/13/APP-web-and-JS/test.html">a标签_玉祥</a>
-    <a href="https://m.lcfarm.com/html_more/more_bankrespository.html">a标签开户页</a>
-	<a href="http://h.huajiao.com/l/profile?uid=65963583">a标签外链花椒直播</a>
-	<a href="https://www.baidu.com/">a标签外链百度</a>
-	<a href="javascript:void();" onclick="window.location='https://www.tmall.com/';">a标签外链天猫</a>
-	<button class="out1" onclick="window.location.href = 'http://h.huajiao.com/l/profile?uid=65963583';">location.href外链花椒直播</button>
-	<button class="out2" onclick="window.location.href = 'https://www.baidu.com/';">location.href外链百度</button>
-	<button class="out3" onclick="window.location.href = 'https://www.tmall.com/'">location.href外链天猫</button>
-	<button class="out01" onclick="window.open('http://h.huajiao.com/l/profile?uid=65963583');">window.open外链花椒直播</button>
-	<button class="out02" onclick="window.open('https://www.baidu.com/');">window.open外链百度</button>
-	<button class="out03" onclick="window.open('https://www.tmall.com/');">window.open外链天猫</button>
+    <a href="https://m.lcfarm.com/html_more/more_bankrespository.html">a标签_开户页</a>
+    <a href="http://h.huajiao.com/l/profile?uid=65963583">a标签外链花椒直播</a>
+    <a href="https://www.baidu.com/">a标签外链百度</a>
+    <a href="javascript:void();" onclick="window.location='https://www.tmall.com/';">a标签外链天猫</a>
+    <button class="out1" onclick="window.location.href = 'http://h.huajiao.com/l/profile?uid=65963583';">location.href外链花椒直播</button>
+    <button class="out2" onclick="window.location.href = 'https://www.baidu.com/';">location.href外链百度</button>
+    <button class="out3" onclick="window.location.href = 'https://www.tmall.com/'">location.href外链天猫</button>
+    <button class="out3" onclick="window.location.href = 'https://www.95516.com/portal/open/init.do?entry=open/'">location.href_95516</button>
+    <button class="out3" onclick="window.location.href = 'https://mrliuys.github.io/2017/05/13/APP-web-and-JS/js.html'">location.hrefa_陈赟</button>
+    <button class="out3" onclick="window.location.href = 'https://mrliuys.github.io/2017/05/13/APP-web-and-JS/test.html'">location.href_玉祥</button>
+    <button class="out3" onclick="window.location.href = 'https://m.lcfarm.com/html_more/more_bankrespository.html'">location.href_开户页</button>
+    <button class="out01" onclick="window.open('http://h.huajiao.com/l/profile?uid=65963583');">window.open外链花椒直播</button>
+    <button class="out02" onclick="window.open('https://www.baidu.com/');">window.open外链百度</button>
+    <button class="out03" onclick="window.open('https://www.tmall.com/');">window.open外链天猫</button>
+    <button class="out01" onclick="window.open('https://www.95516.com/portal/open/init.do?entry=open/');">window.open_95516</button>
+    <button class="out02" onclick="window.open('https://mrliuys.github.io/2017/05/13/APP-web-and-JS/js.html');">window.open_陈赟</button>
+    <button class="out03" onclick="window.open('https://mrliuys.github.io/2017/05/13/APP-web-and-JS/test.html');">window.open_玉祥</button>
+    <button class="out03" onclick="window.open('https://m.lcfarm.com/html_more/more_bankrespository.html');">window.open_开户页</button>
 </body>
 <!-- <script type="text/javascript" src="./js/common/dep/mod.js" data-loader></script> -->
 <!-- <script type="text/javascript" src="./js/zepto.min.js" data-loader></script> -->
 <!-- <script type="text/javascript" src="./js/common/js/common.js" data-loader></script> -->
 <script type="text/javascript">
-		// window.location='/html_my/my_account.html';
-	// var callApp = require('./js/callApp.js'),
-	// 	bom = require('/common/js/base/bom.js');
-	document.getElementsByClassName('out1').onclick = function(){
-		window.location.href = 'http://h.huajiao.com/l/profile?uid=65963583';
-	};
-	// $('.out2').on('click',function(){
-	// 	window.location.href = 'https://www.baidu.com/';
-	// });
-	// $('.out3').on('click',function(){
-	// 	window.location.href = 'https://www.tmall.com/';
-	// });
-	// $('.out01').on('click',function(){
-	// 	window.open('http://h.huajiao.com/l/profile?uid=65963583');
-	// });
-	// $('.out02').on('click',function(){
-	// 	window.open('https://www.baidu.com/');
-	// });
-	// $('.out03').on('click',function(){
-	// 	window.open('https://www.tmall.com/');
-	// });
-
+// window.location='/html_my/my_account.html';
+// var callApp = require('./js/callApp.js'),
+//  bom = require('/common/js/base/bom.js');
+document.getElementsByClassName('out1').onclick = function() {
+    window.location.href = 'http://h.huajiao.com/l/profile?uid=65963583';
+};
+// $('.out2').on('click',function(){
+//  window.location.href = 'https://www.baidu.com/';
+// });
+// $('.out3').on('click',function(){
+//  window.location.href = 'https://www.tmall.com/';
+// });
+// $('.out01').on('click',function(){
+//  window.open('http://h.huajiao.com/l/profile?uid=65963583');
+// });
+// $('.out02').on('click',function(){
+//  window.open('https://www.baidu.com/');
+// });
+// $('.out03').on('click',function(){
+//  window.open('https://www.tmall.com/');
+// });
 </script>
+
 </html>
