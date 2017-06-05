@@ -6,14 +6,56 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//mrliuys.github.io">
-  <title>Archives | MrLiuYS</title>
+  <title>MrLiuYS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="UIWebview/WKWebview原生跟JS的使用交互
+    
+    
+    
+    
+    
+    .entry {
+        -webkit-padding-start: 30px;
+    }
+    
+    .entry li {
+        line-height: 29px;
+        margin-left: -10px;">
+<meta property="og:type" content="article">
 <meta property="og:title" content="MrLiuYS">
-<meta property="og:url" content="//mrliuys.github.io/archives/index.html">
+<meta property="og:url" content="//mrliuys.github.io/2017/05/23/APP-web-and-JS/demo/index.html">
 <meta property="og:site_name" content="MrLiuYS">
+<meta property="og:description" content="UIWebview/WKWebview原生跟JS的使用交互
+    
+    
+    
+    
+    
+    .entry {
+        -webkit-padding-start: 30px;
+    }
+    
+    .entry li {
+        line-height: 29px;
+        margin-left: -10px;">
+<meta property="og:image" content="https://static.lcfarm.com/h5-dist/img/licainongchang/index/lc_logo_cg_2ce7e91.png">
+<meta property="og:updated_time" content="2017-06-05T06:48:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MrLiuYS">
+<meta name="twitter:description" content="UIWebview/WKWebview原生跟JS的使用交互
+    
+    
+    
+    
+    
+    .entry {
+        -webkit-padding-start: 30px;
+    }
+    
+    .entry li {
+        line-height: 29px;
+        margin-left: -10px;">
+<meta name="twitter:image" content="https://static.lcfarm.com/h5-dist/img/licainongchang/index/lc_logo_cg_2ce7e91.png">
   
     <link rel="alternative" href="/atom.xml" title="MrLiuYS" type="application/atom+xml">
   
@@ -149,176 +191,323 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-APP-web-and-JS/demo" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<!-- saved from url=(0044)file:///Users/LiuYongSheng/Desktop/test.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>UIWebview/WKWebview原生跟JS的使用交互</title>
+    <meta name="author" content="Yanyuetian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, target-densitydpi=medium-dpi, user-scalable=no">
+    <meta property="og:site_name" content="UIWebview/WKWebview原生跟JS的使用交互">
+    <script src="file:///android_asset/zepto.js" type="text/javascript"></script>
+    <style>
+    .entry {
+        -webkit-padding-start: 30px;
+    }
     
+    .entry li {
+        line-height: 29px;
+        margin-left: -10px;
+    }
+    
+    .entry li div {
+        margin-right: 10px;
+        padding-left: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background: #222222;
+        color: white;
+        word-break: break-all;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        line-height: 15px;
+        font-size: 10pt;
+    }
+    
+    .entry li button {
+        margin-top: 5px;
+        width: 60px;
+        height: 35px;
+        color: #111111;
+    }
+    </style>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+    function abc() {
+        alert("点击弹出警告框,OC进行url拦截");
+    }
+    </script>
+
+    <div class="blog-header">
+        <h3>UIWebview/WKWebview原生跟JS的使用交互</h3>
+    </div>
+    <div class="lcfarm-logo">
+        <img src="https://static.lcfarm.com/h5-dist/img/licainongchang/index/lc_logo_cg_2ce7e91.png">
+    </div>
+    <ul class="entry">
+        <li>
+            点击弹出警告框,OC进行代码url拦截
+            <br> 代码：
+            <br>
+            <div>
+                alert("点击弹出警告框,OC进行url拦截");
+            </div>
+            <button onclick="abc();">测试</button>
+        </li>
+        <li>
+            气泡提示
+            <br> 代码：
+            <br>
+            <div>
+                native.toast('我是气泡');
+            </div>
+            <button onclick="native.toast(&#39;我是气泡&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试代码执行时间
+            <br> 代码：
+            <br>
+            <div>
+                native.testLossTime(new Date().getTime());
+            </div>
+            <button onclick="native.testLossTime(new Date().getTime());">测试</button>
+        </li>
+        <br>
+        <li>
+            测试登录
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('login');
+            </div>
+            <button onclick="native.openView(&#39;login&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试注册
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('register');
+            </div>
+            <button onclick="native.openView(&#39;register&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试首页
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('home');
+            </div>
+            <button onclick="native.openView(&#39;home&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试定期
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('bid');
+            </div>
+            <button onclick="native.openView(&#39;bid&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试活期
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('curr');
+            </div>
+            <button onclick="native.openView(&#39;curr&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试个人中心
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('account');
+            </div>
+            <button onclick="native.openView(&#39;account&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试红包卡券
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('bonus');
+            </div>
+            <button onclick="native.openView(&#39;bonus&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试充值
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('recharge');
+            </div>
+            <button onclick="native.openView(&#39;recharge&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试提现
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('withdraw');
+            </div>
+            <button onclick="native.openView(&#39;withdraw&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试查看购买记录
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('myRegular');
+            </div>
+            <button onclick="native.openView(&#39;myRegular&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            打开微信
+            <br> 代码：
+            <br>
+            <div>
+                native.openWeChar('理财农场服务号');
+            </div>
+            <button onclick="native.openWeChat(&#39;理财农场服务号&#39;);">测试</button>
+        </li>
+    </ul>
+</body>
+
+</html>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/23/APP-web-and-JS/demo/" class="archive-article-date">
-  	<time datetime="2017-05-23T09:36:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-23</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/23/APP-web-and-JS/test/" class="archive-article-date">
-  	<time datetime="2017-05-23T09:36:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-23</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/13/APP-web-and-JS/" class="archive-article-date">
-  	<time datetime="2017-05-13T02:35:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/13/APP-web-and-JS/">APP web and JS</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/21/谈iOS组件化/" class="archive-article-date">
-  	<time datetime="2017-03-21T02:48:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/21/谈iOS组件化/">谈iOS组件化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/20/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-20T12:26:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/20/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/20/APP-web-and-JS/js/" class="archive-article-date">
-  	<time datetime="2016-12-20T09:10:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-20</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://mrliuys.github.io/2017/05/23/APP-web-and-JS/demo/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/05/23/APP-web-and-JS/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -341,8 +530,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

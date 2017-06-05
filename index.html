@@ -151,6 +151,242 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-APP-web-and-JS/demo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<!-- saved from url=(0044)file:///Users/LiuYongSheng/Desktop/test.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>UIWebview/WKWebview原生跟JS的使用交互</title>
+    <meta name="author" content="Yanyuetian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, target-densitydpi=medium-dpi, user-scalable=no">
+    <meta property="og:site_name" content="UIWebview/WKWebview原生跟JS的使用交互">
+    <script src="file:///android_asset/zepto.js" type="text/javascript"></script>
+    <style>
+    .entry {
+        -webkit-padding-start: 30px;
+    }
+    
+    .entry li {
+        line-height: 29px;
+        margin-left: -10px;
+    }
+    
+    .entry li div {
+        margin-right: 10px;
+        padding-left: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background: #222222;
+        color: white;
+        word-break: break-all;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        line-height: 15px;
+        font-size: 10pt;
+    }
+    
+    .entry li button {
+        margin-top: 5px;
+        width: 60px;
+        height: 35px;
+        color: #111111;
+    }
+    </style>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+    function abc() {
+        alert("点击弹出警告框,OC进行url拦截");
+    }
+    </script>
+
+    <div class="blog-header">
+        <h3>UIWebview/WKWebview原生跟JS的使用交互</h3>
+    </div>
+    <div class="lcfarm-logo">
+        <img src="https://static.lcfarm.com/h5-dist/img/licainongchang/index/lc_logo_cg_2ce7e91.png">
+    </div>
+    <ul class="entry">
+        <li>
+            点击弹出警告框,OC进行代码url拦截
+            <br> 代码：
+            <br>
+            <div>
+                alert("点击弹出警告框,OC进行url拦截");
+            </div>
+            <button onclick="abc();">测试</button>
+        </li>
+        <li>
+            气泡提示
+            <br> 代码：
+            <br>
+            <div>
+                native.toast('我是气泡');
+            </div>
+            <button onclick="native.toast(&#39;我是气泡&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试代码执行时间
+            <br> 代码：
+            <br>
+            <div>
+                native.testLossTime(new Date().getTime());
+            </div>
+            <button onclick="native.testLossTime(new Date().getTime());">测试</button>
+        </li>
+        <br>
+        <li>
+            测试登录
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('login');
+            </div>
+            <button onclick="native.openView(&#39;login&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试注册
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('register');
+            </div>
+            <button onclick="native.openView(&#39;register&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试首页
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('home');
+            </div>
+            <button onclick="native.openView(&#39;home&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试定期
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('bid');
+            </div>
+            <button onclick="native.openView(&#39;bid&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试活期
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('curr');
+            </div>
+            <button onclick="native.openView(&#39;curr&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试个人中心
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('account');
+            </div>
+            <button onclick="native.openView(&#39;account&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试红包卡券
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('bonus');
+            </div>
+            <button onclick="native.openView(&#39;bonus&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试充值
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('recharge');
+            </div>
+            <button onclick="native.openView(&#39;recharge&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试提现
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('withdraw');
+            </div>
+            <button onclick="native.openView(&#39;withdraw&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            测试查看购买记录
+            <br> 代码：
+            <br>
+            <div>
+                native.openView('myRegular');
+            </div>
+            <button onclick="native.openView(&#39;myRegular&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            打开微信
+            <br> 代码：
+            <br>
+            <div>
+                native.openWeChar('理财农场服务号');
+            </div>
+            <button onclick="native.openWeChat(&#39;理财农场服务号&#39;);">测试</button>
+        </li>
+    </ul>
+</body>
+
+</html>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/23/APP-web-and-JS/demo/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-APP-web-and-JS/test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
