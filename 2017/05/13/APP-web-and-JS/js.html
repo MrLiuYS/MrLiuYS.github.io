@@ -55,16 +55,14 @@
     }
     </style>
     <script language="JavaScript">
-    <!--
     function displayUsernameByDOM2() {
         //通过document.getElementById方法得到username的值
-        
-        var aToStr=JSON.stringify(document.getElementById("username").value);
-      
-        native.callAppAction(aToStr);
+
+        // var aToStr = JSON.stringify(document.getElementById("username").value);
+
+        native.callAppAction(document.getElementById("username").value);
 
     }
-    //-->
     </script>
 </head>
 
