@@ -151,129 +151,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-APP-web-and-JS/demo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html>
-<!-- saved from url=(0044)file:///Users/LiuYongSheng/Desktop/test.html -->
-<html>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>UIWebview/WKWebview原生跟JS的使用交互</title>
-    <meta name="author" content="Yanyuetian">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, target-densitydpi=medium-dpi, user-scalable=no">
-    <meta property="og:site_name" content="UIWebview/WKWebview原生跟JS的使用交互">
-    <script src="file:///android_asset/zepto.js" type="text/javascript"></script>
-    <style>
-    .entry {
-        -webkit-padding-start: 30px;
-    }
-    
-    .entry li {
-        line-height: 29px;
-        margin-left: -10px;
-    }
-    
-    .entry li div {
-        margin-right: 10px;
-        padding-left: 8px;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        background: #222222;
-        color: white;
-        word-break: break-all;
-        -ms-word-wrap: break-word;
-        word-wrap: break-word;
-        line-height: 15px;
-        font-size: 10pt;
-    }
-    
-    .entry li button {
-        margin-top: 5px;
-        width: 60px;
-        height: 35px;
-        color: #111111;
-    }
-    </style>
-</head>
-
-<body>
-
-    <div class="blog-header">
-        <h3>UIWebview/WKWebview原生跟JS的使用交互</h3>
-    </div>
-    <div id="lcfarmlogo">
-        <img src="https://static.lcfarm.com/h5-dist/img/licainongchang/index/lc_logo_cg_2ce7e91.png">
-    </div>
-    <ul class="entry">
-        <li>
-            气泡提示,url接口
-            <br> 代码：
-            <br>
-            <div>
-                native://toast?message="我是气泡"
-            </div>
-            <a href="native://toast?message=" 我是气泡""="" target="_blank" rel="external">测试</a>
-            
-        </li>
-        <li>
-            UIWebview : JavaScriptCore : 气泡提示
-            <br> 代码：
-            <br>
-            <div>
-                native.toast('我是气泡');
-            </div>
-            <button onclick="native.toast(&#39;我是气泡&#39;);">测试</button>
-        </li>
-        <br>
-        <li>
-            WKWebview : scriptMessageHandler : 气泡提示
-            <br> 代码：
-            <br>
-            <div>
-                window.webkit.messageHandlers.toast.postMessage({body: '我是气泡'});
-            </div>
-            <button onclick="window.webkit.messageHandlers.toast.postMessage({body: '我是气泡'});">测试</button>
-        </li>
-        <br>
-        
-    </ul>
-</body>
-
-</html>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/23/APP-web-and-JS/demo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-APP-web-and-JS/test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -397,7 +274,7 @@
 
 <body>
     <a href="router://app.lcfarm.com/account/myEarlyExit?index=0" target="_blank" rel="external">提前退出</a>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/asset?index=0';">location.href总资产</button>
+
     <a href="https://www.95516.com/portal/open/init.do?entry=open" target="_blank" rel="external">a标签95516</a>
     <a href="https://mrliuys.github.io/2017/05/13/APP-web-and-JS/js.html" target="_blank" rel="external">a标签_陈赟</a>
     <a href="https://mrliuys.github.io/2017/05/13/APP-web-and-JS/test.html" target="_blank" rel="external">a标签_玉祥</a>
@@ -405,6 +282,25 @@
     <a href="http://h.huajiao.com/l/profile?uid=65963583" target="_blank" rel="external">a标签外链花椒直播</a>
     <a href="https://www.baidu.com/" target="_blank" rel="external">a标签外链百度</a>
     <a href="javascript:void();" onclick="window.location='https://www.tmall.com/';" target="_blank" rel="external">a标签外链天猫</a>
+
+
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/asset?index=0';">总资产</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/address';">收货地址</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/pay/withdraw?from=account';">提现</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/pay/recharge?from=account';">充值</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/regular?index=0';">我的定期</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/claim?index=0';">我的债转</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/current';">我的零钱包</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/balancefinancial';">余额理财</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/automaticInvest';">自动投资</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/repaymentcalendar';">回款日历</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/tradedetail';">交易明细</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/coupon';">红包卡券</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/customerService';">客户服务</button>
+    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/message?index=0';">我的消息/公告</button>
+
+
+
     <button class="out1" onclick="window.location.href = 'http://h.huajiao.com/l/profile?uid=65963583';">location.href外链花椒直播</button>
     <button class="out2" onclick="window.location.href = 'https://www.baidu.com/';">location.href外链百度</button>
     <button class="out3" onclick="window.location.href = 'https://www.tmall.com/'">location.href外链天猫</button>
@@ -461,6 +357,129 @@ document.getElementsByClassName('out1').onclick = function() {
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/05/23/APP-web-and-JS/test/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-APP-web-and-JS/demo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<!-- saved from url=(0044)file:///Users/LiuYongSheng/Desktop/test.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>UIWebview/WKWebview原生跟JS的使用交互</title>
+    <meta name="author" content="Yanyuetian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, target-densitydpi=medium-dpi, user-scalable=no">
+    <meta property="og:site_name" content="UIWebview/WKWebview原生跟JS的使用交互">
+    <script src="file:///android_asset/zepto.js" type="text/javascript"></script>
+    <style>
+    .entry {
+        -webkit-padding-start: 30px;
+    }
+    
+    .entry li {
+        line-height: 29px;
+        margin-left: -10px;
+    }
+    
+    .entry li div {
+        margin-right: 10px;
+        padding-left: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background: #222222;
+        color: white;
+        word-break: break-all;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        line-height: 15px;
+        font-size: 10pt;
+    }
+    
+    .entry li button {
+        margin-top: 5px;
+        width: 60px;
+        height: 35px;
+        color: #111111;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="blog-header">
+        <h3>UIWebview/WKWebview原生跟JS的使用交互</h3>
+    </div>
+    <div id="lcfarmlogo">
+        <img src="https://static.lcfarm.com/h5-dist/img/licainongchang/index/lc_logo_cg_2ce7e91.png">
+    </div>
+    <ul class="entry">
+        <li>
+            气泡提示,url接口
+            <br> 代码：
+            <br>
+            <div>
+                native://toast?message="我是气泡"
+            </div>
+            <a href="native://toast?message=" 我是气泡""="" target="_blank" rel="external">测试</a>
+            
+        </li>
+        <li>
+            UIWebview : JavaScriptCore : 气泡提示
+            <br> 代码：
+            <br>
+            <div>
+                native.toast('我是气泡');
+            </div>
+            <button onclick="native.toast(&#39;我是气泡&#39;);">测试</button>
+        </li>
+        <br>
+        <li>
+            WKWebview : scriptMessageHandler : 气泡提示
+            <br> 代码：
+            <br>
+            <div>
+                window.webkit.messageHandlers.toast.postMessage({body: '我是气泡'});
+            </div>
+            <button onclick="window.webkit.messageHandlers.toast.postMessage({body: '我是气泡'});">测试</button>
+        </li>
+        <br>
+        
+    </ul>
+</body>
+
+</html>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/23/APP-web-and-JS/demo/">展开全文 >></a>
         </p>
       
 
