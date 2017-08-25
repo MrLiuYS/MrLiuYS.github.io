@@ -111,10 +111,237 @@
         border-radius: 5px;
         margin: 0.15rem auto;
     }
+
+    table {
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 2px;
+}
+table td {
+    border:1px solid #999999;
+    text-align:left;
+    color:#333333;
+    font-family:Arial;
+    font-size:14px;
+    padding:5px
+}
     </style>
 </head>
 
 <body>
+
+    <table  style="width: 9%" cellpadding="0" cellspacing="0">
+        <thead >
+            <tr >
+                <th scope="col"  width="80px" nowrap >模块</th>
+                <th scope="col"  width="100px" nowrap >子模块</th>
+                <th scope="col"  >路由</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>用户模块</td>
+                <td>登录</td>
+                <td><a href="router://app.lcfarm.com/user/login">user/login</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>注册</td>
+                <td><a href="router://app.lcfarm.com/user/register">user/register</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>重置密码</td>
+                <td><a href="">user/</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>修改手机</td>
+                <td><a href="">user/</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>修改密码</td>
+                <td><a href="">user/</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>设置手势密码</td>
+                <td><a href="">user/</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>设置指纹密码</td>
+                <td><a href="">user/</a></td>
+            </tr>
+
+
+            <tr>
+                <td>理财模块</td>
+                <td>理财首页</td>
+                <td><a href="router://app.lcfarm.com/main/tabbar?index=0">main/tabbar?index=0</a></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>定期列表</td>
+                <td><a href="router://app.lcfarm.com/home/productlist?type=regular">home/productlist?type=regular</a></td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td>新手列表</td>
+                <td><a href="router://app.lcfarm.com/home/productlist?type=newbie">home/productlist?type=newbie</a></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>债转列表</td>
+                <td><a href="router://app.lcfarm.com/home/productlist?type=claim">home/productlist?type=claim</a></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>零钱包-NEW</td>
+                <td><a href="router://app.lcfarm.com/home/current?type=NEW">home/current?type=NEW</a></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>零钱包-OLD</td>
+                <td><a href="router://app.lcfarm.com/home/current?type=OLD">home/current?type=OLD</a></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>定期详情</td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>债转详情</td>
+                <td><a href="router://app.lcfarm.com/home/claimdetail?zrid=1554">home/claimdetail?zrid=1554</a></td>
+            </tr>
+            <tr>
+                <td>发现模块</td>
+                <td>发现页面</td>
+                <td><a href="router://app.lcfarm.com/main/tabbar?index=1">main/tabbar?index=1</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>我的积分</td>
+                <td><a href="router://app.lcfarm.com/account/integral">account/integral</a></td>
+            </tr>
+            <tr>
+                <td>账户模块</td>
+                <td>我的账户</td>
+                <td><a href="router://app.lcfarm.com/main/tabbar?index=2">main/tabbar?index=2</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>我的定期</td>
+                <td><a href="router://app.lcfarm.com/account/regular?index=0">account/regular?index=0</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>我的债权</td>
+                <td><a href="router://app.lcfarm.com/account/claim?index=0">account/claim?index=0</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>我的活期</td>
+                <td><a href="router://app.lcfarm.com/account/current">account/current</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>交易明细</td>
+                <td><a href="router://app.lcfarm.com/account/tradedetail">account/tradedetail</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>余额理财</td>
+                <td><a href="router://app.lcfarm.com/account/balancefinancial?balanceState=3&hasIncome=1&isShowAuditStatus=1">account/balancefinancial?balanceState=3&hasIncome=1&isShowAuditStatus=1</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>自动投资</td>
+                <td><a href="router://app.lcfarm.com/account/automaticInvest?isOpenedAutoBidForEver=1">account/automaticInvest?isOpenedAutoBidForEver=1</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>资产图表</td>
+                <td><a href="router://app.lcfarm.com/account/asset?index=0">account/asset?index=0</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>个人专属标</td>
+                <td><a href="router://app.lcfarm.com/account/personalexclusive">account/personalexclusive</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>红包卡券</td>
+                <td><a href="router://app.lcfarm.com/account/coupon">account/coupon</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>个人设置</td>
+                <td><a href="router://app.lcfarm.com/account/set">account/set</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>补填邀请人</td>
+                <td><a href="router://app.lcfarm.com/account/inviteperson">account/inviteperson</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>回款日历</td>
+                <td><a href="router://app.lcfarm.com/account/repaymentcalendar">account/repaymentcalendar</a></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>收货地址</td>
+                <td><a href="router://app.lcfarm.com/account/address">account/address</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>客户服务</td>
+                <td><a href="router://app.lcfarm.com/account/customerService">account/customerService</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>提前退出</td>
+                <td><a href="router://app.lcfarm.com/account/myEarlyExit?index=0">account/myEarlyExit?index=0</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>我的消息/公告</td>
+                <td><a href="router://app.lcfarm.com/account/message?index=0">account/message?index=0</a></td>
+            </tr>
+            <tr>
+                <td>支付模块</td>
+                <td>充值</td>
+                <td><a href="router://app.lcfarm.com/pay/recharge?from=register">pay/recharge?from=register</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>提现</td>
+                <td><a href="router://app.lcfarm.com/pay/withdraw">pay/withdraw</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>我的银行卡</td>
+                <td><a href="router://app.lcfarm.com/pay/mybank">pay/mybank</a></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+
+
     <a href="router://app.lcfarm.com/account/myEarlyExit?index=0">提前退出</a>
 
     <a href="https://www.95516.com/portal/open/init.do?entry=open">a标签95516</a>
@@ -124,66 +351,6 @@
     <a href="http://h.huajiao.com/l/profile?uid=65963583">a标签外链花椒直播</a>
     <a href="https://www.baidu.com/">a标签外链百度</a>
     <a href="javascript:void();" onclick="window.location='https://www.tmall.com/';">a标签外链天猫</a>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/main/tabbar?index=0';">理财模块</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/main/tabbar?index=1';">发现模块</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/main/tabbar?index=2';">用户模块</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/main/tabbar?index=3';">安全模块</button>
-
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/asset?index=0';">总资产</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/integral';">我的积分</button>
-
-
-
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/user/login';">登录</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/user/register';">注册</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/home/productlist?type=regular';">定期列表</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/home/productlist?type=newbie';">新手列表</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/home/productlist?type=claim';">债转列表</button>
-
-        <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/home/current?type=NEW';">零钱包-NEW</button>
-
-        <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/home/current?type=OLD';">零钱包-OLD</button>
-
-        <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/home/claimdetail?zrid=1554';">债权转让详情zrid=1554</button>
-
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/personalexclusive';">个人专属标</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/inviteperson';">补填邀请人</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/set';">个人设置</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/automaticInvest?isOpenedAutoBidForEver=1';">自动投资</button>
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/account/balancefinancial?balanceState=3&hasIncome=1&isShowAuditStatus=1';">余额理财</button>
-
-
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/address';">收货地址</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/pay/withdraw?from=account';">提现</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/pay/recharge?from=account';">充值</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/regular?index=0';">我的定期</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/claim?index=0';">我的债转</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/current';">我的零钱包</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/balancefinancial';">余额理财</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/automaticInvest';">自动投资</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/repaymentcalendar';">回款日历</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/tradedetail';">交易明细</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/coupon';">红包卡券</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/customerService';">客户服务</button>
-    <button class="out1" onclick="window.location.href = 'router://app.lcfarm.com/account/message?index=0';">我的消息/公告</button>
-
-
 
     <button class="out1" onclick="window.location.href = 'http://h.huajiao.com/l/profile?uid=65963583';">location.href外链花椒直播</button>
     <button class="out2" onclick="window.location.href = 'https://www.baidu.com/';">location.href外链百度</button>
