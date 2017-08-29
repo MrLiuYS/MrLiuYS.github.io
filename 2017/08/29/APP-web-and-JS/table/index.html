@@ -38,7 +38,7 @@
 
     th {
         font-weight: bold;">
-<meta property="og:updated_time" content="2017-08-29T03:03:08.000Z">
+<meta property="og:updated_time" content="2017-08-29T03:11:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MrLiuYS">
 <meta name="twitter:description" content="router
@@ -443,7 +443,7 @@ function CreateTableFromJSON() {
 
             if (col[j] == "router") {
 
-                tabCell.innerHTML = "<form onSubmit=\"return myFunction(this);\"> <textarea style=\"width:80% \" name='key' value=>" + myBooks[i][col[j]] + "</textarea> <input value='跳转' type='submit'> </form>"
+                tabCell.innerHTML = "<form onSubmit=\"return myFunction(this);\"> <textarea style=\"width:80%\" name='key' value=>" + myBooks[i][col[j]] + "</textarea> <input value='跳转' type='submit'> </form>"
             } else {
                 tabCell.innerHTML = myBooks[i][col[j]];
             }
@@ -458,8 +458,11 @@ function CreateTableFromJSON() {
 
 function myFunction(sender) {
 
+    alert("router://app.lcfarm.com/" + sender.key.value);
+
     window.open("router://app.lcfarm.com/" + sender.key.value);
 
+    return false;
 }
 </script>
 
