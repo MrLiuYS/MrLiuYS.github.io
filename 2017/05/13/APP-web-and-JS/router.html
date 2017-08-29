@@ -4,51 +4,52 @@
 <head>
     <meta charset="utf-8">
     <title>app内嵌页面跳转</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="format-detection" content="telephone=no,address=no,email=no">
-    <meta name="mobileOptimized" content="width">
-    <meta name="handheldFriendly" content="true">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <style type="text/css">
+    table {
+        border-collapse: collapse;
+        border-style: solid;
+        border-width: 2px;
+    }
 
-<style type="text/css">
-table {
-	border-collapse: collapse;
-	border-style: solid;
-	border-width: 2px;
-}
-table td {
-	border:1px solid #999999;
-	text-align:left;
-	color:#333333;
-	font-family:Arial;
-	font-size:14px;
-	padding:5px
-}
-</style>
-
+    table td {
+        border: 1px solid #999999;
+        text-align: left;
+        color: #333333;
+        font-family: Arial;
+        font-size: 14px;
+        padding: 5px
+    }
+    </style>
 </head>
 
 <body>
-    <table  style="width: 9%" cellpadding="0" cellspacing="0">
-        <thead >
-            <tr >
-                <th scope="col"  width="80px" nowrap >模块</th>
-                <th scope="col"  width="100px" nowrap >子模块</th>
-                <th scope="col"  >路由</th>
+    <table style="width: 100%" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th scope="col" width="80px" nowrap>模块</th>
+                <th scope="col" width="100px" nowrap>子模块</th>
+                <th scope="col" width="100%">路由</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>用户模块</td>
                 <td>登录</td>
-                <td><a href="router://app.lcfarm.com/user/login">user/login</a></td>
+                <td>
+                    <input type="text" name="fname" value="user/register" />
+                    <button onclick="myFunction(this)">Try it</button>
+                </td>
             </tr>
             <tr>
                 <td></td>
                 <td>注册</td>
-                <td><a href="router://app.lcfarm.com/user/register">user/register</a></td>
+                <td>
+                    <form onSubmit="return myFunction(this);">
+                        <input name='key' value="user/register">
+                        <input value='ok' type='submit'>
+                    </form>
+                </td>
+                <!-- <td><a href="router://app.lcfarm.com/user/register">user/register</a></td> -->
             </tr>
             <tr>
                 <td></td>
@@ -75,44 +76,36 @@ table td {
                 <td>设置指纹密码</td>
                 <td><a href="">user/</a></td>
             </tr>
-
-
-			<tr>
+            <tr>
                 <td>理财模块</td>
                 <td>理财首页</td>
                 <td><a href="router://app.lcfarm.com/main/tabbar?index=0">main/tabbar?index=0</a></td>
             </tr>
-
             <tr>
                 <td></td>
                 <td>定期列表</td>
                 <td><a href="router://app.lcfarm.com/home/productlist?type=regular">home/productlist?type=regular</a></td>
             </tr>
-            
             <tr>
                 <td></td>
                 <td>新手列表</td>
                 <td><a href="router://app.lcfarm.com/home/productlist?type=newbie">home/productlist?type=newbie</a></td>
             </tr>
-
             <tr>
                 <td></td>
                 <td>债转列表</td>
                 <td><a href="router://app.lcfarm.com/home/productlist?type=claim">home/productlist?type=claim</a></td>
             </tr>
-
             <tr>
                 <td></td>
                 <td>零钱包-NEW</td>
                 <td><a href="router://app.lcfarm.com/home/current?type=NEW">home/current?type=NEW</a></td>
             </tr>
-
             <tr>
                 <td></td>
                 <td>零钱包-OLD</td>
                 <td><a href="router://app.lcfarm.com/home/current?type=OLD">home/current?type=OLD</a></td>
             </tr>
-
             <tr>
                 <td></td>
                 <td>定期详情</td>
@@ -198,7 +191,6 @@ table td {
                 <td>回款日历</td>
                 <td><a href="router://app.lcfarm.com/account/repaymentcalendar">account/repaymentcalendar</a></td>
             </tr>
-
             <tr>
                 <td></td>
                 <td>收货地址</td>
@@ -234,39 +226,15 @@ table td {
                 <td>我的银行卡</td>
                 <td><a href="router://app.lcfarm.com/pay/mybank">pay/mybank</a></td>
             </tr>
-
-
-
-
-
         </tbody>
     </table>
 </body>
-<!-- <script type="text/javascript" src="./js/common/dep/mod.js" data-loader></script> -->
-<!-- <script type="text/javascript" src="./js/zepto.min.js" data-loader></script> -->
-<!-- <script type="text/javascript" src="./js/common/js/common.js" data-loader></script> -->
 <script type="text/javascript">
-// window.location='/html_my/my_account.html';
-// var callApp = require('./js/callApp.js'),
-//  bom = require('/common/js/base/bom.js');
-document.getElementsByClassName('out1').onclick = function() {
-    window.location.href = 'http://h.huajiao.com/l/profile?uid=65963583';
-};
-// $('.out2').on('click',function(){
-//  window.location.href = 'https://www.baidu.com/';
-// });
-// $('.out3').on('click',function(){
-//  window.location.href = 'https://www.tmall.com/';
-// });
-// $('.out01').on('click',function(){
-//  window.open('http://h.huajiao.com/l/profile?uid=65963583');
-// });
-// $('.out02').on('click',function(){
-//  window.open('https://www.baidu.com/');
-// });
-// $('.out03').on('click',function(){
-//  window.open('https://www.tmall.com/');
-// });
+function myFunction(sender) {
+
+    alert("router://app.lcfarm.com/" + sender.key.value);
+
+}
 </script>
 
 </html>

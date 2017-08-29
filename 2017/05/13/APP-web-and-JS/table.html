@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Convert JSON Data to HTML Table Example</title>
+    <style>
+    table,
+    th,
+    td {
+        margin: 10px 0;
+        border: solid 1px #333;
+        padding: 2px 4px;
+        font: 15px Verdana;
+    }
+
+    th {
+        font-weight: bold;
+    }
+    </style>
+</head>
+
+<body>
+    <input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />
+    <div id="showData"></div>
+</body>
+<script>
+function CreateTableFromJSON() {
+    var myBooks = [{
+            "模块": "用户模块",
+            "子模块": "登录",
+            "router": "user/login"
+        },
+        {
+            "模块": "",
+            "子模块": "注册",
+            "router": "user/register"
+        },
+        {
+            "模块": "",
+            "子模块": "重置密码",
+            "router": ""
+        },
+        {
+            "模块": "",
+            "子模块": "修改手机",
+            "router": ""
+        },
+        {
+            "模块": "",
+            "子模块": "修改密码",
+            "router": ""
+        },
+        {
+            "模块": "",
+            "子模块": "设置手势密码",
+            "router": ""
+        },
+        {
+            "模块": "",
+            "子模块": "设置指纹密码",
+            "router": ""
+        },
+        {
+            "模块": "理财模块",
+            "子模块": "理财首页",
+            "router": "main/tabbar?index=0"
+        },
+        {
+            "模块": "",
+            "子模块": "定期列表",
+            "router": "home/productlist?type=regular"
+        },
+        {
+            "模块": "",
+            "子模块": "新手列表",
+            "router": "home/productlist?type=newbie"
+        },
+        {
+            "模块": "",
+            "子模块": "债转列表",
+            "router": "home/productlist?type=claim"
+        },
+        {
+            "模块": "",
+            "子模块": "零钱包",
+            "router": "home/current?type=NEW"
+        },
+        {
+            "模块": "",
+            "子模块": "定期详情",
+            "router": "home/regulardetail?productId=85843&productType=ZZD"
+        },
+        {
+            "模块": "",
+            "子模块": "债转详情",
+            "router": "home/claimdetail?zrid=1554"
+        },
+        {
+            "模块": "发现模块",
+            "子模块": "发现页面",
+            "router": "main/tabbar?index=1"
+        },
+        {
+            "模块": "",
+            "子模块": "我的积分",
+            "router": "account/integral"
+        },
+        {
+            "模块": "账户模块",
+            "子模块": "我的账户",
+            "router": "main/tabbar?index=2"
+        },
+        {
+            "模块": "",
+            "子模块": "我的定期",
+            "router": "account/regular?index=0"
+        },
+        {
+            "模块": "",
+            "子模块": "我的债权",
+            "router": "account/claim?index=0"
+        },
+        {
+            "模块": "",
+            "子模块": "我的活期",
+            "router": "account/current"
+        },
+        {
+            "模块": "",
+            "子模块": "交易明细",
+            "router": "account/tradedetail"
+        },
+        {
+            "模块": "",
+            "子模块": "余额理财",
+            "router": "account/balancefinancial?balanceState=3&hasIncome=1&isShowAuditStatus=1"
+        },
+        {
+            "模块": "",
+            "子模块": "自动投资",
+            "router": "account/automaticInvest?isOpenedAutoBidForEver=1"
+        },
+        {
+            "模块": "",
+            "子模块": "资产图标",
+            "router": "account/asset?index=0&linkUrl=https://m.lcfarm.com/html_activity/zwnc/zwncad.html?channel=zwsxh5banner"
+        },
+        {
+            "模块": "",
+            "子模块": "个人专属标",
+            "router": "account/personalexclusive"
+        },
+        {
+            "模块": "",
+            "子模块": "红包卡券",
+            "router": "account/coupon"
+        },
+        {
+            "模块": "",
+            "子模块": "个人设置",
+            "router": "account/set"
+        },
+        {
+            "模块": "",
+            "子模块": "补填邀请人",
+            "router": "account/inviteperson"
+        },
+        {
+            "模块": "",
+            "子模块": "回款日历",
+            "router": "account/repaymentcalendar"
+        },
+        {
+            "模块": "",
+            "子模块": "收货地址",
+            "router": "account/address"
+        },
+        {
+            "模块": "",
+            "子模块": "客户服务",
+            "router": "account/customerService"
+        },
+        {
+            "模块": "",
+            "子模块": "提前退出",
+            "router": "account/myEarlyExit?index=0"
+        },
+        {
+            "模块": "",
+            "子模块": "我的消息/公告",
+            "router": "account/message?index=0"
+        },
+        {
+            "模块": "支付模块",
+            "子模块": "充值",
+            "router": "pay/recharge?from=register"
+        },
+        {
+            "模块": "",
+            "子模块": "提现",
+            "router": "pay/withdraw"
+        },
+        {
+            "模块": "",
+            "子模块": "我的银行卡",
+            "router": "pay/mybank?bankAccountStatus=DKH&hasBank=1"
+        },
+        {
+            "模块": "通用模块",
+            "子模块": "裂变红包",
+            "router": "public/fissionRedBox?linkUrl=https://m.lcfarm.com/html_activity/zwnc/zwncad.html?channel=zwsxh5banner"
+        }
+
+    ]
+
+    var col = [];
+    for (var i = 0; i < myBooks.length; i++) {
+        for (var key in myBooks[i]) {
+            if (col.indexOf(key) === -1) {
+                col.push(key);
+            }
+        }
+    }
+
+    var table = document.createElement("table");
+
+    var tr = table.insertRow(-1); // TABLE ROW.
+
+    for (var i = 0; i < col.length; i++) {
+        var th = document.createElement("th"); // TABLE HEADER.
+                        
+        th.innerHTML = col[i];
+        tr.appendChild(th);
+    }
+
+    // ADD JSON DATA TO THE TABLE AS ROWS.
+    for (var i = 0; i < myBooks.length; i++) {
+
+        tr = table.insertRow(-1);
+
+        for (var j = 0; j < col.length; j++) {
+            var tabCell = tr.insertCell(-1);
+
+            if (col[j] == "router") {
+
+                tabCell.innerHTML = "<form onSubmit=\"return myFunction(this);\"> <input name='key' value=" + myBooks[i][col[j]] + "> <input value='ok' type='submit'> </form>"
+            }else {
+                tabCell.innerHTML = myBooks[i][col[j]];
+            }
+
+
+        }
+    }
+
+    var divContainer = document.getElementById("showData");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
+}
+
+function myFunction(sender) {
+
+    alert("router://app.lcfarm.com/" + sender.key.value);
+
+}
+
+
+</script>
+
+</html>
