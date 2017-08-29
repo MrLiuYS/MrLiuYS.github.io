@@ -8,43 +8,52 @@
   <link rel="dns-prefetch" href="//mrliuys.github.io">
   <title>MrLiuYS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Convert JSON Data to HTML Table Example
+  <meta name="description" content="router
     
     table,
     th,
     td {
-        margin: 10px 0;
+        margin: 1px 0;
         border: solid 1px #333;
-        padding: 2px 4px;
+        padding: 1px 1px;
         font: 15px Verdana;
-    }">
+    }
+
+    th {
+        font-weight: bold;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MrLiuYS">
 <meta property="og:url" content="//mrliuys.github.io/2017/08/29/APP-web-and-JS/table/index.html">
 <meta property="og:site_name" content="MrLiuYS">
-<meta property="og:description" content="Convert JSON Data to HTML Table Example
+<meta property="og:description" content="router
     
     table,
     th,
     td {
-        margin: 10px 0;
+        margin: 1px 0;
         border: solid 1px #333;
-        padding: 2px 4px;
+        padding: 1px 1px;
         font: 15px Verdana;
-    }">
-<meta property="og:updated_time" content="2017-08-29T02:08:32.000Z">
+    }
+
+    th {
+        font-weight: bold;">
+<meta property="og:updated_time" content="2017-08-29T02:56:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MrLiuYS">
-<meta name="twitter:description" content="Convert JSON Data to HTML Table Example
+<meta name="twitter:description" content="router
     
     table,
     th,
     td {
-        margin: 10px 0;
+        margin: 1px 0;
         border: solid 1px #333;
-        padding: 2px 4px;
+        padding: 1px 1px;
         font: 15px Verdana;
-    }">
+    }
+
+    th {
+        font-weight: bold;">
   
     <link rel="alternative" href="/atom.xml" title="MrLiuYS" type="application/atom+xml">
   
@@ -189,14 +198,14 @@
 <html>
 
 <head>
-    <title>Convert JSON Data to HTML Table Example</title>
+    <title>router</title>
     <style>
     table,
     th,
     td {
-        margin: 10px 0;
+        margin: 1px 0;
         border: solid 1px #333;
-        padding: 2px 4px;
+        padding: 1px 1px;
         font: 15px Verdana;
     }
 
@@ -206,8 +215,7 @@
     </style>
 </head>
 
-<body>
-    <input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON">
+<body onload="CreateTableFromJSON()">
     <div id="showData"></div>
 </body>
 <script>
@@ -330,7 +338,7 @@ function CreateTableFromJSON() {
         {
             "模块": "",
             "子模块": "资产图标",
-            "router": "account/asset?index=0&linkUrl=https://m.lcfarm.com/html_activity/zwnc/zwncad.html?channel=zwsxh5banner"
+            "router": "account/asset?index=0"
         },
         {
             "模块": "",
@@ -411,11 +419,15 @@ function CreateTableFromJSON() {
 
     var table = document.createElement("table");
 
+    table.style.width = "100%";
+
     var tr = table.insertRow(-1); // TABLE ROW.
 
     for (var i = 0; i < col.length; i++) {
         var th = document.createElement("th"); // TABLE HEADER.
-                        
+
+        th.style.scope = "col";
+
         th.innerHTML = col[i];
         tr.appendChild(th);
     }
@@ -426,15 +438,15 @@ function CreateTableFromJSON() {
         tr = table.insertRow(-1);
 
         for (var j = 0; j < col.length; j++) {
+
             var tabCell = tr.insertCell(-1);
 
             if (col[j] == "router") {
 
-                tabCell.innerHTML = "<form onSubmit=\"return myFunction(this);\"> <input name='key' value=" + myBooks[i][col[j]] + "> <input value='ok' type='submit'> </form>"
-            }else {
+                tabCell.innerHTML = "<form onSubmit=\"return myFunction(this);\"> <textarea style=\"width:80%\" name='key' value=>" + myBooks[i][col[j]] + "</textarea> <input value='跳转' type='submit'> </form>"
+            } else {
                 tabCell.innerHTML = myBooks[i][col[j]];
             }
-
 
         }
     }
@@ -449,8 +461,6 @@ function myFunction(sender) {
     alert("router://app.lcfarm.com/" + sender.key.value);
 
 }
-
-
 </script>
 
 </html>
